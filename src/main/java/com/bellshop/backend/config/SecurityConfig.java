@@ -76,7 +76,10 @@ public class SecurityConfig {
         CorsConfiguration configuration = new CorsConfiguration();
         
         // Autorise uniquement ton frontend Next.js à faire des requêtes
-        configuration.setAllowedOrigins(List.of("http://localhost:3000")); 
+        configuration.setAllowedOrigins(List.of(
+        "http://localhost:3000", 
+        "https://bellshop-frontend.vercel.app"
+    )); 
         
         // Autorise les méthodes HTTP standards que tu vas utiliser sur ton dashboard
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS")); 
